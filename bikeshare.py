@@ -176,12 +176,16 @@ def show_raw_data(df):
     """Displays the raw data on selected city, month and day."""
 
     for i in range(0, len(df), 5):
+        # Ask for raw data display
         raw_data = input('\nWould you like to see more raw data of this analysis? (yes/no) ').lower()
         if raw_data == 'yes':
+            # Show raw data
             print(df.iloc[i:i+5])
         if raw_data == 'no':
+            # Leave data display function
             print('Ok, leaving the raw data display.')
             break
+        # Check for correct input
         if raw_data != 'yes' and raw_data != 'no':
             print("\nPlease type \'yes\' or \'no\'")
 
