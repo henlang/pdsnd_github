@@ -101,7 +101,7 @@ def time_stats(df):
     most_common_hour = df['hour'].mode()
     print('Most common starting hour:', most_common_hour)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
@@ -124,7 +124,7 @@ def station_stats(df):
     most_common_trip = df['trip'].mode()
     print('Most commonly taken trip:', most_common_trip)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
@@ -142,7 +142,7 @@ def trip_duration_stats(df):
     mean_travel_time = round((df['Trip Duration'].mean()), 3)
     print('Mean travel time in seconds:', mean_travel_time)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
@@ -168,25 +168,21 @@ def user_stats(df):
     print('\nMost recent year of birth: ', user_max_birthyear)
     print('\nMost common year of birth: ', user_mode_birthyear)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
-def show_raw_data(df):
-    """Displays the raw data on selected city, month and day."""
+def show_detail_data(df):
+    """Displays the detailled data on selected city, month and day."""
 
     for i in range(0, len(df), 5):
-        # Ask for raw data display
-        raw_data = input('\nWould you like to see more raw data of this analysis? (yes/no) ').lower()
-        if raw_data == 'yes':
-            # Show raw data
+        detail_data = input('\nWould you like to see more detailled data of this analysis? (yes/no) ').lower()
+        if detail_data == 'yes':
             print(df.iloc[i:i+5])
-        if raw_data == 'no':
-            # Leave data display function
-            print('Ok, leaving the raw data display.')
+        if detail_data == 'no':
+            print('Ok, leaving the detailled data display.')
             break
-        # Check for correct input
-        if raw_data != 'yes' and raw_data != 'no':
+        if detail_data != 'yes' and detail_data != 'no':
             print("\nPlease type \'yes\' or \'no\'")
 
 def restart():
@@ -212,7 +208,7 @@ def main():
         else:
             print("\nNo user specific data available for Washington")
 
-        show_raw_data(df)
+        show_detail_data(df)
         restart()
         break
 
