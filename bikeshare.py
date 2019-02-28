@@ -101,7 +101,7 @@ def time_stats(df):
     most_common_hour = df['hour'].mode()
     print('Most common starting hour:', most_common_hour)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
@@ -124,7 +124,7 @@ def station_stats(df):
     most_common_trip = df['trip'].mode()
     print('Most commonly taken trip:', most_common_trip)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
@@ -142,7 +142,7 @@ def trip_duration_stats(df):
     mean_travel_time = round((df['Trip Duration'].mean()), 3)
     print('Mean travel time in seconds:', mean_travel_time)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
@@ -168,7 +168,7 @@ def user_stats(df):
     print('\nMost recent year of birth: ', user_max_birthyear)
     print('\nMost common year of birth: ', user_mode_birthyear)
 
-    print("\nThis took %s seconds." % round((time.time() - start_time), 3))
+    print("\nThis took %s seconds." % round((time.time() - start_time), 4))
     print('-'*40)
 
 
