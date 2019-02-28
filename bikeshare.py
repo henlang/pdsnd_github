@@ -176,12 +176,16 @@ def show_detail_data(df):
     """Displays the detailled data on selected city, month and day."""
 
     for i in range(0, len(df), 5):
+        # Ask for raw data display
         detail_data = input('\nWould you like to see more detailled data of this analysis? (yes/no) ').lower()
         if detail_data == 'yes':
+            # Show raw data
             print(df.iloc[i:i+5])
         if detail_data == 'no':
+            # Leave data display function
             print('Ok, leaving the detailled data display.')
             break
+        # Check for correct input
         if detail_data != 'yes' and detail_data != 'no':
             print("\nPlease type \'yes\' or \'no\'")
 
