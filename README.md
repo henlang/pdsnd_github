@@ -1,5 +1,5 @@
 ### Date created
-February 29th, 2019
+February 28th, 2019
 
 ### Project Title
 Analysis of Bikeshare data
@@ -15,10 +15,16 @@ This filtered data is used to generate statistics on the following topics:
 - total and average trip duration
 - statistics on bikeshare users (only Chicago and New York)   
 
-After displaying the statistics the program can display the filtered raw data on user input. 
+After displaying the statistics the program can display the filtered raw data on user input.
 
 ### Files used
-Include the files used
+Program file
+- bikeshare.py
+
+Data files
+- chicago.csv
+- new_york_city.csv
+- washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project was part of the Udacity Programming for Data Science Nanodegree (https://eu.udacity.com/course/programming-for-data-science-nanodegree--nd104)
